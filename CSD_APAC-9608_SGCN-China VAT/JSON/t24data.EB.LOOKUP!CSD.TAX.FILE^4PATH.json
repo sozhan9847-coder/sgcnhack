@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "CSD.TAX.FILE*PATH",
+    "dsfApiType" : "EB.LOOKUP",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DATA.NAME" : [ {
+      "DATA.NAME" : "FILE.PATH",
+      "DATA.VALUE" : ".\\CSD.MIG\\CSD.MIG.DATA.csv"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.TAX.FILE*PATH"
+    } ]
+  }
+}

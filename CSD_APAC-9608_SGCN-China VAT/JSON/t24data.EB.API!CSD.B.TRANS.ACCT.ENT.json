@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.TRANS.ACCT.ENT",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.B.TRANS.ACCT.ENT"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdBTransAcctEnt",
+    "JAVA.METHOD" : "bookEntries"
+  }
+}

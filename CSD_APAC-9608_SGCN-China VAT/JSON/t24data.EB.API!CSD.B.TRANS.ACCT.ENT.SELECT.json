@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.TRANS.ACCT.ENT.SELECT",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.B.TRANS.ACCT.ENT.SELECT"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdBTransAcctEntSelect",
+    "JAVA.METHOD" : "getIds"
+  }
+}

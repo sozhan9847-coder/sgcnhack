@@ -1,0 +1,2 @@
+BCSD.B.MIG.TAX.DATA.UPDATEEB181285_MANO02__OFS_BROWSERTC260105162581285_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

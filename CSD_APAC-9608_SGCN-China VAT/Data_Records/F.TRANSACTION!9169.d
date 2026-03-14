@@ -1,0 +1,2 @@
+WHT DebitYDEBITYNONMSCBANKWHT DebitWHT DebitTRANSYES186155_MANO02__OFS_BROWSERTC251220234286155_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

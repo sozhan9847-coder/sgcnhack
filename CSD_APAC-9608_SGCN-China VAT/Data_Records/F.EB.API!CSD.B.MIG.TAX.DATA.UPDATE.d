@@ -1,0 +1,2 @@
+CSD.B.MIG.TAX.DATA.UPDATEFULLMETHODprocessSingleThreadedCsdBMigTaxDataUpdatecom.temenos.csd.vat194746_MANO02__OFS_BROWSERTC260105141094746_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

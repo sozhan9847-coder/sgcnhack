@@ -1,0 +1,65 @@
+{
+  "header" : {
+    "id" : "CSD.STORE.PL.CATEG.PARAM",
+    "dsfApiType" : "EB.TABLE.DEFINITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACT.DESC" : [ {
+      "ACT.DESC" : "CSD.STORE.PL.CATEG.RANGE"
+    } ],
+    "LINK.TO.WFL" : "NO",
+    "PREFIX" : "EB.CSD48",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "MAX.CHAR" : "10",
+      "DESCRIPTION" : "ID",
+      "FIELD.NAME" : "ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "PL.CATEG.PARAM",
+      "FIELD.NAME" : "PL.CATEG.PARAM",
+      "SUB.ASSOC.CODE" : "XX.",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.5",
+      "FIELD.NAME" : "RESERVED.5",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.4",
+      "FIELD.NAME" : "RESERVED.4",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.3",
+      "FIELD.NAME" : "RESERVED.3",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.2",
+      "FIELD.NAME" : "RESERVED.2",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.1",
+      "FIELD.NAME" : "RESERVED.1",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    } ],
+    "KEY.FIELD" : "ID",
+    "FILE.TYPE" : "CUS",
+    "PGM.TYPE" : "L"
+  }
+}

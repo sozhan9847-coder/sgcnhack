@@ -1,0 +1,2 @@
+CSD.CALCULATE.WHT.AMTFULLMETHODgetTaxAmountCsdCalculateWhtAmtcom.temenos.csd.vat186903_MANO02__OFS_BROWSERTC251212142486903_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

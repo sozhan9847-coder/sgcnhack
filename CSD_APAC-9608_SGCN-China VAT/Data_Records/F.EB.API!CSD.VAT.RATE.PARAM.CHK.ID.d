@@ -1,0 +1,2 @@
+CSD.VAT.RATE.PARAM.CHK.IDFULLMETHODcheckIdCsdVatRateParamChkIdcom.temenos.csd.vat291228_AUTHORISER__OFS_BROWSERTC251105171191228_AUTHORISER_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

@@ -1,0 +1,15 @@
+{
+  "header" : {
+    "id" : "SYSTEM",
+    "dsfApiType" : "EB.CSD.TAX.DETS.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "VAT.ENTRY.PARAM" : "CSD.VAT.ENTRY"
+  }
+}

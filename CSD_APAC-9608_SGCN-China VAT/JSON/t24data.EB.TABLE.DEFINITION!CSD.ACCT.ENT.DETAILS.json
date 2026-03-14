@@ -1,0 +1,96 @@
+{
+  "header" : {
+    "id" : "CSD.ACCT.ENT.DETAILS",
+    "dsfApiType" : "EB.TABLE.DEFINITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACT.DESC" : [ {
+      "ACT.DESC" : "CSD.ACCT.ENT.DETAILS"
+    } ],
+    "PREFIX" : "EB.CSD43",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "MAX.CHAR" : "100",
+      "DESCRIPTION" : "ID",
+      "FIELD.NAME" : "ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "DESCRIPTION" : "ACCOUNTING.ENTRY",
+      "FIELD.NAME" : "ACCOUNTING.ENTRY",
+      "DATA.TYPE" : "CSD.TRANS.TEXT"
+    }, {
+      "DESCRIPTION" : "TRANS.CONCAT.DETS",
+      "FIELD.NAME" : "TRANS.CONCAT.DETS",
+      "DATA.TYPE" : "CSD.TRANS.TEXT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.10",
+      "FIELD.NAME" : "RESERVED.10",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.9",
+      "FIELD.NAME" : "RESERVED.9",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.8",
+      "FIELD.NAME" : "RESERVED.8",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.7",
+      "FIELD.NAME" : "RESERVED.7",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.6",
+      "FIELD.NAME" : "RESERVED.6",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.5",
+      "FIELD.NAME" : "RESERVED.5",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.4",
+      "FIELD.NAME" : "RESERVED.4",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.3",
+      "FIELD.NAME" : "RESERVED.3",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.2",
+      "FIELD.NAME" : "RESERVED.2",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.1",
+      "FIELD.NAME" : "RESERVED.1",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    } ],
+    "KEY.FIELD" : "ID",
+    "FILE.TYPE" : "FIN",
+    "PGM.TYPE" : "L"
+  }
+}

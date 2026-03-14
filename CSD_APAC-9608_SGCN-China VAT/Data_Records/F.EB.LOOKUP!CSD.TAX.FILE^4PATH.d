@@ -1,0 +1,2 @@
+CSD.TAX.FILE*PATHFILE.PATH.\CSD.MIG\CSD.MIG.DATA.csvCSD.TAX.FILEPATH194746_MANO02__OFS_BROWSERTC260105135794746_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.TRANS.DETAILS.UPD",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.B.TRANS.DETAILS.UPD"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdBTransDetailsUpd",
+    "JAVA.METHOD" : "processSingleThreaded"
+  }
+}

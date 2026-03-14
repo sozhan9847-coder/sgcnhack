@@ -1,0 +1,733 @@
+{
+  "header" : {
+    "id" : "PP.ORDER.ENTRY,CSD.CTR.IN.CREATE.NEW",
+    "dsfApiType" : "VERSION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "LANGUAGE.CODE" : [ {
+      "LANGUAGE.CODE" : "1"
+    } ],
+    "FIELDS.PER.LINE" : "MULTI",
+    "LOCAL.REF.FIELD" : "LOCAL.REF",
+    "AUTOM.FIELD.NO" : [ {
+      "AUTOM.FIELD.NO" : "Source",
+      "AUT.NEW.CONTENT" : "OE",
+      "AUT.OLD.CONTENT" : "0X"
+    }, {
+      "AUTOM.FIELD.NO" : "OutputChannel",
+      "AUT.NEW.CONTENT" : "LEDGER",
+      "AUT.OLD.CONTENT" : "0X"
+    }, {
+      "AUTOM.FIELD.NO" : "Direction",
+      "AUT.NEW.CONTENT" : "I",
+      "AUT.OLD.CONTENT" : "0X"
+    }, {
+      "AUTOM.FIELD.NO" : "TransferType",
+      "AUT.NEW.CONTENT" : "C",
+      "AUT.OLD.CONTENT" : "0X"
+    }, {
+      "AUTOM.FIELD.NO" : "IncomingMessageType",
+      "AUT.NEW.CONTENT" : "RFCT",
+      "AUT.OLD.CONTENT" : "0X"
+    } ],
+    "FIELD.NO" : [ {
+      "FIELD.NO" : "FatalError",
+      "COLUMN" : "1",
+      "ENRICHM.CHAR" : "2",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-35-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "CLASS-BOLD.RED"
+      } ],
+      "TABLE.LINE" : "0"
+    }, {
+      "FIELD.NO" : "*",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TXT.040..078" : "      Payment Processing Information   "
+      } ],
+      "TEXT.CHAR.MAX" : "39",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-78-"
+      } ],
+      "TABLE.LINE" : "1"
+    }, {
+      "FIELD.NO" : "Status",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Status"
+      } ],
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Status"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-82-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "ProcessCompany",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "ENQ.PPT.COMPANY",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Processing Company"
+      } ],
+      "ENRICHM.CHAR" : "36",
+      "TEXT" : [ {
+        "TEXT" : "Processing Company"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-83-"
+      } ],
+      "TABLE.LINE" : "2"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "TransactionReferenceNumber",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "FT Number"
+      } ],
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Transaction Reference"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-85-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "ProcessingDate",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Processing Date"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Processing Date"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-54-"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "ProcessingDateImposedFlag",
+      "COLUMN" : "179",
+      "ENRICHM.CHAR" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "179-7-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "GROUP.WITH.PREVIOUS.FIELD"
+      } ],
+      "TABLE.LINE" : "3"
+    }, {
+      "FIELD.NO" : "SendersReferenceNumber",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Sender's Reference"
+      } ],
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Sender's Reference"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-104-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "Priority",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Priority"
+      } ],
+      "ENRICHM.CHAR" : "36",
+      "TEXT" : [ {
+        "TEXT" : "Priority"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-115-"
+      } ],
+      "TABLE.LINE" : "4"
+    }, {
+      "FIELD.NO" : "RelatedReference",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Related Reference"
+      } ],
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Related Reference"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-104-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "Product",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "ENQ.PPT.CLEARINGNATURECODE",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Product"
+      } ],
+      "ENRICHM.CHAR" : "22",
+      "TEXT" : [ {
+        "TEXT" : "Product"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-97-"
+      } ],
+      "TABLE.LINE" : "5"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "Source",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Source"
+      } ],
+      "ENRICHM.CHAR" : "31",
+      "TEXT" : [ {
+        "TEXT" : "Source"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-85-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "OutputChannel",
+      "ENQ.SELECTION" : "CompanyID EQ ProcessCompany",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "PP.ENQ.OUTPUT.CHANNEL",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Output Channel"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Output Channel"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-53-"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "FIELD.NO" : "OutputChannelImposedFlag",
+      "COLUMN" : "179",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Output Channel Imposed Flag"
+      } ],
+      "ENRICHM.CHAR" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "179-7-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "GROUP.WITH.PREVIOUS.FIELD"
+      } ],
+      "TABLE.LINE" : "6"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "Direction",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Direction"
+      } ],
+      "ENRICHM.CHAR" : "6",
+      "TEXT" : [ {
+        "TEXT" : "Direction"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-85-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "TransactionCurrency",
+      "ENQ.SELECTION" : "CompanyID EQ ProcessCompany",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "ENQ.PPT.CURRENCY",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Transaction Currency"
+      } ],
+      "ENRICHM.CHAR" : "36",
+      "TEXT" : [ {
+        "TEXT" : "Transaction Currency"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-83-"
+      } ],
+      "TABLE.LINE" : "7"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "TransferType",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Transfer Type"
+      } ],
+      "ENRICHM.CHAR" : "6",
+      "TEXT" : [ {
+        "TEXT" : "Transfer Type"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-85-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "FIELD.NO" : "TransactionAmount",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Transaction Amount"
+      } ],
+      "ENRICHM.CHAR" : "23",
+      "TEXT" : [ {
+        "TEXT" : "Transaction Amount"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-84-"
+      } ],
+      "TABLE.LINE" : "8"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "IncomingMessageType",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "PP.INCOMINGMSGTYPE",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Incoming Message Type"
+      } ],
+      "ENRICHM.CHAR" : "31",
+      "TEXT" : [ {
+        "TEXT" : "Incoming Message Type"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-85-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "DISPLAY.TYPE" : "COMBOBOX",
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "ChargeOption",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Charge Option"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Charge Option"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-78-"
+      } ],
+      "TABLE.LINE" : "9"
+    }, {
+      "FIELD.NO" : "DebitAccountNumber",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Debit Account Number"
+      } ],
+      "ENRICHM.CHAR" : "10",
+      "TEXT" : [ {
+        "TEXT" : "Debit Account Number"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-89-"
+      } ],
+      "TABLE.LINE" : "10"
+    }, {
+      "FIELD.NO" : "DebitAccountNumberImposedFlag",
+      "COLUMN" : "84",
+      "TEXT.CHAR.MAX" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "84-7-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "GROUP.WITH.PREVIOUS.FIELD"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "DebitAccountCurrency",
+      "ENQ.SELECTION" : "CompanyID EQ ProcessCompany",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "ENQ.PPT.CURRENCY",
+      "ENRICHM.CHAR" : "16",
+      "TEXT" : [ {
+        "TEXT" : "Debit Account Currency"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-63-"
+      } ],
+      "TABLE.LINE" : "11"
+    }, {
+      "FIELD.NO" : "CreditAccountNumber",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Credit Account Number"
+      } ],
+      "ENRICHM.CHAR" : "25",
+      "TEXT" : [ {
+        "TEXT" : "Credit Account Number"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-104-"
+      } ],
+      "TABLE.LINE" : "12"
+    }, {
+      "FIELD.NO" : "CreditAccountNumberImposedFlag",
+      "COLUMN" : "84",
+      "TEXT.CHAR.MAX" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "84-7-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "GROUP.WITH.PREVIOUS.FIELD"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "CreditAccountCurrency",
+      "ENQ.SELECTION" : "CompanyID EQ ProcessCompany",
+      "COLUMN" : "110",
+      "DROP.DOWN" : "ENQ.PPT.CURRENCY",
+      "ENRICHM.CHAR" : "16",
+      "TEXT" : [ {
+        "TEXT" : "Credit Account Currency"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-63-"
+      } ],
+      "TABLE.LINE" : "13"
+    }, {
+      "FIELD.NO" : "OrderingAccount",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Ordering Account"
+      } ],
+      "ENRICHM.CHAR" : "16",
+      "TEXT" : [ {
+        "TEXT" : "Ordering Account"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-97-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "CASE.CONV" : "LOWERCASE",
+      "FIELD.NO" : "UniqueEndToEndRef",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "UETR"
+      } ],
+      "ENRICHM.CHAR" : "37",
+      "TEXT" : [ {
+        "TEXT" : "Unique End To End Reference"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-117-"
+      } ],
+      "TABLE.LINE" : "14"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "SenderInstitutionBIC",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Sender Institution BIC"
+      } ],
+      "ENRICHM.CHAR" : "5",
+      "TEXT" : [ {
+        "TEXT" : "Sender Institution BIC"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-86-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "CASE.CONV" : "UPPERCASE",
+      "FIELD.NO" : "SenderInstitutionNCC",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Sender Institution NCC"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Sender Institution NCC"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-80-"
+      } ],
+      "TABLE.LINE" : "15"
+    }, {
+      "FIELD.NO" : "IntraCompanyPayment",
+      "COLUMN" : "1",
+      "TEXT" : [ {
+        "TEXT" : "Intra Company Payment"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-46-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "FIELD.NO" : "SaveAsTemplate",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Save As Template"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Save As Template"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-46-"
+      } ],
+      "TABLE.LINE" : "16"
+    }, {
+      "DISPLAY.TYPE" : "DROPDOWN.NOINPUT",
+      "FIELD.NO" : "SelectTemplate",
+      "ENQ.SELECTION" : "TemplateValues EQ StoreTemplateValues",
+      "COLUMN" : "1",
+      "DROP.DOWN" : "ENQ.PPT.OE.TEMPLATE",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Select from Template"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Select from Template"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-83-"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "PreAuthorizationNumber",
+      "COLUMN" : "110",
+      "TEXT" : [ {
+        "TEXT" : "Pre-Authorization Number"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-61-"
+      } ],
+      "TABLE.LINE" : "17"
+    }, {
+      "FIELD.NO" : "NickName",
+      "COLUMN" : "1",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Nick Name"
+      } ],
+      "TEXT" : [ {
+        "TEXT" : "Nick Name"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-83-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "FxContractId",
+      "COLUMN" : "110",
+      "PROMPT.TEXT" : [ {
+        "TOOL.TIP" : "Fx Contract Id"
+      } ],
+      "ENRICHM.CHAR" : "35",
+      "TEXT" : [ {
+        "TEXT" : "Fx Contract Id"
+      } ],
+      "TEXT.CHAR.MAX" : "40",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "110-114-"
+      } ],
+      "TABLE.LINE" : "18"
+    }, {
+      "FIELD.NO" : "StoreTemplateValues",
+      "COLUMN" : "1",
+      "TABLE.COLUMN" : [ {
+        "TABLE.COLUMN" : "1-42-"
+      } ],
+      "ATTRIBS" : [ {
+        "ATTRIBS" : "ENRICHMENT.ONLY"
+      } ],
+      "TABLE.LINE" : "19"
+    } ],
+    "ASSOC.VERSION" : [ {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,DB.CR.INFO.NEW"
+    }, {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,ERROR.INFO"
+    }, {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,CHARGE.INFO"
+    }, {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,ROUTING.INFO"
+    }, {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,ADDITIONALDETAILS"
+    }, {
+      "ASSOC.VERSION" : "PP.ORDER.ENTRY,AUDIT"
+    } ],
+    "REPORT.LOCKS" : "YES",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Order Entry Incoming Transfer (CTR)"
+    } ],
+    "NOINPUT.FIELD" : [ {
+      "NOINPUT.FIELD" : "FatalError"
+    }, {
+      "NOINPUT.FIELD" : "Status"
+    }, {
+      "NOINPUT.FIELD" : "RelatedReference"
+    }, {
+      "NOINPUT.FIELD" : "Product"
+    }, {
+      "NOINPUT.FIELD" : "Source"
+    }, {
+      "NOINPUT.FIELD" : "OutputChannel"
+    }, {
+      "NOINPUT.FIELD" : "OutputChannelImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "Direction"
+    }, {
+      "NOINPUT.FIELD" : "TransferType"
+    }, {
+      "NOINPUT.FIELD" : "SenderInstitutionNCC"
+    }, {
+      "NOINPUT.FIELD" : "DebitAccountCompany"
+    }, {
+      "NOINPUT.FIELD" : "OrderPartyTagOption"
+    }, {
+      "NOINPUT.FIELD" : "DebitAccountNumberBIC"
+    }, {
+      "NOINPUT.FIELD" : "DebitAmount"
+    }, {
+      "NOINPUT.FIELD" : "DebitExchangeRate"
+    }, {
+      "NOINPUT.FIELD" : "DebitExchangeRateImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "DebitTreasuryRate"
+    }, {
+      "NOINPUT.FIELD" : "DebitTreasuryRateImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "DebitCustomerSpread"
+    }, {
+      "NOINPUT.FIELD" : "DebitCustSpreadImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "DebitExchangeRateReference"
+    }, {
+      "NOINPUT.FIELD" : "VATDebitMainAmountIndicator"
+    }, {
+      "NOINPUT.FIELD" : "VATDebitMainAmountPercentage"
+    }, {
+      "NOINPUT.FIELD" : "CreditAccountCompany"
+    }, {
+      "NOINPUT.FIELD" : "CreditAccountNumberBIC"
+    }, {
+      "NOINPUT.FIELD" : "CreditAmount"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryAccount"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryIdentifierCode"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryName"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryAddress1"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryAddress2"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryAddress3"
+    }, {
+      "NOINPUT.FIELD" : "BeneficiaryCountry"
+    }, {
+      "NOINPUT.FIELD" : "WaiveDebitCharges"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeComponent"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeCurrency"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeAmount"
+    }, {
+      "NOINPUT.FIELD" : "DebitReceiverCharge"
+    }, {
+      "NOINPUT.FIELD" : "DebitReceiverChargeImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "VATDebitMainChargeIndicator"
+    }, {
+      "NOINPUT.FIELD" : "VATDebitMainChargePercentage"
+    }, {
+      "NOINPUT.FIELD" : "CreditReceiverCharge"
+    }, {
+      "NOINPUT.FIELD" : "SendersCorresAccount"
+    }, {
+      "NOINPUT.FIELD" : "SendersCorresIdentifierCode"
+    }, {
+      "NOINPUT.FIELD" : "SendersCorresAddress"
+    }, {
+      "NOINPUT.FIELD" : "ReceiversCorresAccount"
+    }, {
+      "NOINPUT.FIELD" : "ReceiversCorresIdentifierCode"
+    }, {
+      "NOINPUT.FIELD" : "ReceiversCorresAddress"
+    }, {
+      "NOINPUT.FIELD" : "ThirdReimburseInstAccount"
+    }, {
+      "NOINPUT.FIELD" : "ThirdReimburseInstIdentifierCd"
+    }, {
+      "NOINPUT.FIELD" : "ThirdReimburseInstAddress"
+    }, {
+      "NOINPUT.FIELD" : "IntermediaryInstAccount"
+    }, {
+      "NOINPUT.FIELD" : "IntermediaryInstIdentifierCode"
+    }, {
+      "NOINPUT.FIELD" : "IntermediaryInstAddress"
+    }, {
+      "NOINPUT.FIELD" : "AccountWithInstAccount"
+    }, {
+      "NOINPUT.FIELD" : "AccountWithInstIdentifierCode"
+    }, {
+      "NOINPUT.FIELD" : "AccountWithInstAddress"
+    }, {
+      "NOINPUT.FIELD" : "AuditTrail"
+    }, {
+      "NOINPUT.FIELD" : "Information"
+    }, {
+      "NOINPUT.FIELD" : "Warning"
+    }, {
+      "NOINPUT.FIELD" : "FunctionalError"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeAccountCompany"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeAccount"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeAccountImposedFlag"
+    }, {
+      "NOINPUT.FIELD" : "DebitChargeAccountCurrency"
+    }, {
+      "NOINPUT.FIELD" : "CreditChargeAccountCompany"
+    } ],
+    "NO.OF.AUTH" : "1",
+    "RECORDS.PER.PAGE" : "1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.ADJ.TRANS.POST.COB",
+    "dsfApiType" : "BATCH",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JOB.NAME" : [ {
+      "JOB.NAME" : "CSD.B.ADJ.CAP.TRANS.UPD",
+      "FREQUENCY" : "D"
+    } ],
+    "BATCH.ENVIRONMENT" : "F"
+  }
+}

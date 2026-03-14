@@ -1,0 +1,2 @@
+BNK/CSD.B.TRANS.ACCT.ENT.EODSYSTEMAUTOCSD.B.TRANS.ACCT.ENT.WL38421_MANO02__OFS_BROWSERTC26010612068421_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

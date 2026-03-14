@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.AA.POST.VAT.ENT.UPD",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CsdPostVatEntDetsUpd"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdPostVatEntDetsUpd",
+    "JAVA.METHOD" : "postCoreTableUpdate"
+  }
+}

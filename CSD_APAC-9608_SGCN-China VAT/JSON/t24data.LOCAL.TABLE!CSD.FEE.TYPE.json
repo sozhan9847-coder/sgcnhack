@@ -1,0 +1,21 @@
+{
+  "header" : {
+    "id" : "CSD.FEE.TYPE",
+    "dsfApiType" : "LOCAL.TABLE",
+    "dsfApiComponent" : "t24data",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "SHORT.NAME" : [ {
+      "SHORT.NAME" : "CSD.FEE.TYPE"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.FEE.TYPE"
+    } ],
+    "CHAR.TYPE" : "ANY",
+    "MAXIMUM.CHAR" : "70"
+  }
+}

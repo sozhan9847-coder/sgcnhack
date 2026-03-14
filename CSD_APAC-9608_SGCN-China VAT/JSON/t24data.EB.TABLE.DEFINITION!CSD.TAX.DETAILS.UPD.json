@@ -1,0 +1,356 @@
+{
+  "header" : {
+    "id" : "CSD.TAX.DETAILS.UPD",
+    "dsfApiType" : "EB.TABLE.DEFINITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACT.DESC" : [ {
+      "ACT.DESC" : "CSD.TAX.DETAILS.UPD"
+    } ],
+    "PREFIX" : "EB.CSD52",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "ID",
+      "FIELD.NAME" : "ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "10",
+      "DESCRIPTION" : "Client BDR ID",
+      "FIELD.NAME" : "CLIENT.BRD.ID",
+      "SUB.ASSOC.CODE" : "XX<",
+      "DATA.TYPE" : "CUSTOMER"
+    }, {
+      "MAX.CHAR" : "10",
+      "DESCRIPTION" : "Client Category",
+      "FIELD.NAME" : "CLIENT.CATEGORY",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "NUMERIC"
+    }, {
+      "MAX.CHAR" : "15",
+      "DESCRIPTION" : "Client Location",
+      "FIELD.NAME" : "CLIENT.LOCATION",
+      "SUB.ASSOC.CODE" : "XX>",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Account Number",
+      "FIELD.NAME" : "ACCOUNT.NUMBER",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "17",
+      "DESCRIPTION" : "Arrangement Number",
+      "FIELD.NAME" : "ARRANGEMENT.NUMBER",
+      "DATA.TYPE" : "ARR"
+    }, {
+      "MAX.CHAR" : "6",
+      "DESCRIPTION" : "Account Category",
+      "FIELD.NAME" : "ACCOUNT.CATEGORY",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "12",
+      "DESCRIPTION" : "Account Currency",
+      "FIELD.NAME" : "ACCOUNT.CURRENCY",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "100",
+      "DESCRIPTION" : "Fee Transaction reference",
+      "FIELD.NAME" : "FEE.TRANSACTION.REFERENCE",
+      "SUB.ASSOC.CODE" : "XX<",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "15",
+      "DESCRIPTION" : "Fee Transaction Type",
+      "FIELD.NAME" : "FEE.TRANSACTION.TYPE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "50",
+      "DESCRIPTION" : "Charge Detail",
+      "FIELD.NAME" : "CHARGE.DETAIL",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Fee amount",
+      "FIELD.NAME" : "FEE.AMOUNT",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "3",
+      "DESCRIPTION" : "Fee Currency",
+      "FIELD.NAME" : "FEE.CURRENCY",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Date of fee transaction",
+      "FIELD.NAME" : "DATE.OF.FEE.TRANSACTION",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "DATE"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Value Date of Fee transaction",
+      "FIELD.NAME" : "VALUE.DATE.OF.FEE.TRANSACTION",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "DATE"
+    }, {
+      "DESCRIPTION" : "VAT Exchange Rate for Fee",
+      "FIELD.NAME" : "VAT.EXCHANGE.RATE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "NUMERIC"
+    }, {
+      "DESCRIPTION" : "WHT Exchange Rate for Fee",
+      "FIELD.NAME" : "WHT.EXCHANGE.RATE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "NUMERIC"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "Output VAT Rate for Fee",
+      "FIELD.NAME" : "OUTPUT.VAT.RATE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Output VAT FCY amount for Fee",
+      "FIELD.NAME" : "OUTPUT.VAT.FCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Output VAT LCY amount for Fee",
+      "FIELD.NAME" : "OUTPUT.VAT.LCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "Input VAT Rate for Fee",
+      "FIELD.NAME" : "INPUT.VAT.RATE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "15",
+      "DESCRIPTION" : "Input VAT Calc Type for Fee",
+      "FIELD.NAME" : "INPUT.VAT.CALC.TYPE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Input VAT FCY amount for Fee",
+      "FIELD.NAME" : "INPUT.VAT.FCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Input VAT LCY amount for Fee",
+      "FIELD.NAME" : "INPUT.VAT.LCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "WHT Rate for Fee",
+      "FIELD.NAME" : "WHT.RATE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "15",
+      "DESCRIPTION" : "WHT Calculation Type for Fee",
+      "FIELD.NAME" : "WHT.CALCULATION.TYPE.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "WHT FCY amount for Fee",
+      "FIELD.NAME" : "WHT.FCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "WHT LCY amount for Fee",
+      "FIELD.NAME" : "WHT.LCY.AMOUNT.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "DESCRIPTION" : "Transaction Reversal for Fee",
+      "FIELD.NAME" : "TRANSACTION.REVERSAL.FOR.FEE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Transaction Reversal Date",
+      "FIELD.NAME" : "TRANSACTION.REVERSAL.DATE",
+      "SUB.ASSOC.CODE" : "XX>",
+      "DATA.TYPE" : "DATE"
+    }, {
+      "MAX.CHAR" : "50",
+      "DESCRIPTION" : "Interest Detail",
+      "FIELD.NAME" : "INTEREST.DETAIL",
+      "SUB.ASSOC.CODE" : "XX<",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "15",
+      "DESCRIPTION" : "Interest Transaction Type",
+      "FIELD.NAME" : "INTEREST.TRANSACTION.TYPE",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "3",
+      "DESCRIPTION" : "Interest Currency",
+      "FIELD.NAME" : "INTEREST.CURRENCY",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "DESCRIPTION" : "VAT Exchange Rate for Interest",
+      "FIELD.NAME" : "VAT.EXCHANGE.RATE.FOR.INTEREST",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "NUMERIC"
+    }, {
+      "DESCRIPTION" : "WHT Exchange Rate for Interest",
+      "FIELD.NAME" : "WHT.EXCHANGE.RATE.FOR.INTEREST",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "NUMERIC"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "Output VAT Rate for Interest",
+      "FIELD.NAME" : "OUTPUT.VAT.RATE.FOR.INTEREST",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "Input VAT Rate for Interest",
+      "FIELD.NAME" : "INPUT.VAT.RATE.FOR.INTEREST",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "WHT Rate for Interest",
+      "FIELD.NAME" : "WHT.RATE.FOR.INTEREST",
+      "SUB.ASSOC.CODE" : "XX-",
+      "DATA.TYPE" : "RATE"
+    }, {
+      "MAX.CHAR" : "8",
+      "DESCRIPTION" : "Period Start",
+      "FIELD.NAME" : "PERIOD.START",
+      "SUB.ASSOC.CODE" : "XX-XX<",
+      "DATA.TYPE" : "DATE"
+    }, {
+      "MAX.CHAR" : "8",
+      "DESCRIPTION" : "Period End",
+      "FIELD.NAME" : "PERIOD.END",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "DATE"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Previous Tot Out VAT Amt",
+      "FIELD.NAME" : "PRE.TOT.OUT.VAT.AMT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total Int Amount",
+      "FIELD.NAME" : "TOTAL.INT.AMOUNT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total Output VAT FCY amt for Int",
+      "FIELD.NAME" : "TOT.OUT.VAT.FCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total Output VAT LCY amt for Int",
+      "FIELD.NAME" : "TOT.OUT.VAT.LCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total Input VAT FCY amt for Int",
+      "FIELD.NAME" : "TOT.INPUT.VAT.FCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total Input VAT LCY amt for Int",
+      "FIELD.NAME" : "TOT.INPUT.VAL.LCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total WHT FCY amt for Int",
+      "FIELD.NAME" : "TOT.WHT.FCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX-",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "Total WHT LCY amt for Int",
+      "FIELD.NAME" : "TOT.WHT.LCY.AMT.FOR.INT",
+      "SUB.ASSOC.CODE" : "XX-XX>",
+      "DATA.TYPE" : "AMOUNT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.9",
+      "FIELD.NAME" : "RESERVED.9",
+      "SUB.ASSOC.CODE" : "XX>",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.8",
+      "FIELD.NAME" : "RESERVED.8",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.7",
+      "FIELD.NAME" : "RESERVED.7",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.6",
+      "FIELD.NAME" : "RESERVED.6",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.5",
+      "FIELD.NAME" : "RESERVED.5",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.4",
+      "FIELD.NAME" : "RESERVED.4",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.3",
+      "FIELD.NAME" : "RESERVED.3",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.2",
+      "FIELD.NAME" : "RESERVED.2",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.1",
+      "FIELD.NAME" : "RESERVED.1",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    } ],
+    "KEY.FIELD" : "ID",
+    "FILE.TYPE" : "CUS",
+    "PGM.TYPE" : "L"
+  }
+}

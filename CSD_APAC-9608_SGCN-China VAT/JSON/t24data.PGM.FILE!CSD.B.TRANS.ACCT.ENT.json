@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.TRANS.ACCT.ENT",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "BATCH.JOB" : [ {
+      "BATCH.JOB" : "@BATCH.JOB.CONTROL"
+    } ],
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "CSD.B.TRANS.ACCT.ENT"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "B"
+  }
+}

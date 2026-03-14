@@ -1,0 +1,2 @@
+BCSD.B.BOOK.DATE.UPDATE@BATCH.JOB.CONTROLEB44223_MANO02__OFS_BROWSERTC26011716194223_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "9170",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DEFAULT.VALUE.DATE" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "BANK",
+    "STMT.NARR.REF" : "TRANS",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "EXPOSURE.DATE" : "Y",
+    "SWIFT.NARRATIVE" : "NMSC",
+    "SHORT.DESC" : "WHT Credit",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "WHT Credit",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "WHT Credit"
+    } ]
+  }
+}

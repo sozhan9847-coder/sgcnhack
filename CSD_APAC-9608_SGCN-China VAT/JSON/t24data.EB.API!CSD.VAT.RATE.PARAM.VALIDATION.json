@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.VAT.RATE.PARAM.VALIDATION",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.VAT.RATE.PARAM.VALIDATION"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdVatRateParamValidation",
+    "JAVA.METHOD" : "validateRecord"
+  }
+}

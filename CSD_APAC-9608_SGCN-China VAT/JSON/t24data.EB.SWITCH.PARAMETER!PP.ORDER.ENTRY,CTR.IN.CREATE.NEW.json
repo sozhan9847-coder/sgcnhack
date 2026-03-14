@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "PP.ORDER.ENTRY,CTR.IN.CREATE.NEW",
+    "dsfApiType" : "EB.SWITCH.PARAMETER",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "PP.ORDER.ENTRY,CSD.CTR.IN.CREATE.NEW",
+      "SWITCH.VERSION" : "PP.ORDER.ENTRY,CSD.CTR.IN.CREATE.NEW"
+    } ]
+  }
+}

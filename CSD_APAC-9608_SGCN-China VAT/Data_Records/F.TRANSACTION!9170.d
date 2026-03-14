@@ -1,0 +1,2 @@
+WHT CreditYCREDITYYNONMSCBANKWHT CreditWHT CreditTRANSYES144196_MANO02__OFS_BROWSERTC251220234344196_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

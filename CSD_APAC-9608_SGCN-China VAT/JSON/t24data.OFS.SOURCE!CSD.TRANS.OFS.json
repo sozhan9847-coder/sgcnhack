@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "CSD.TRANS.OFS",
+    "dsfApiType" : "OFS.SOURCE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DET.PREFIX" : "SOCGEN",
+    "LOG.FILE.DIR" : "GTS.LOG",
+    "FIELD.VAL" : "YES",
+    "DESCRIPTION" : "Browser",
+    "SOURCE.TYPE" : "GLOBUS",
+    "MAINT.MSG.DETS" : "Y",
+    "GENERIC.USER" : "INPUTTER",
+    "LOGIN.ID" : [ {
+      "LOGIN.ID" : "ashwin"
+    } ],
+    "IN.QUEUE.DIR" : "OFS.MSG.IN",
+    "SAME.AUTHORISER" : "YES",
+    "LOG.DETAIL.LEVEL" : "EXCEPT",
+    "SYNTAX.TYPE" : "OFS"
+  }
+}

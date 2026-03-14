@@ -1,0 +1,2 @@
+CSD.B.TRANS.ACCT.ENTFULLMETHODbookEntriesCsdBTransAcctEntcom.temenos.csd.vat124234_MANO01__OFS_BROWSERTC251119222224234_MANO01_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "id" : "EB.CSD.VAT.WHT.RATE.PARAM",
+    "dsfApiType" : "EB.TABLE.PROCEDURES",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "AFTER.AUTH.PROC" : [ {
+      "AFTER.AUTH.PROC" : "CSD.CAP.PL.CATEG.PARAM"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "EB.CSD.VAT.WHT.RATE.PARAM.TEST"
+    } ],
+    "CHECK.ID.PROC" : [ {
+      "CHECK.ID.PROC" : "CSD.VAT.RATE.PARAM.CHK.ID"
+    } ],
+    "CROSSVAL.PROC" : [ {
+      "CROSSVAL.PROC" : "CSD.VAT.RATE.PARAM.VALIDATION"
+    } ],
+    "BEF.AUTH.PROC" : [ {
+      "BEF.AUTH.PROC" : "CSD.VAT.WHT.BEST.CHECK"
+    } ]
+  }
+}

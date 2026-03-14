@@ -1,0 +1,2 @@
+BCSD.B.TRANS.ACCT.ENT@BATCH.JOB.CONTROLEB194151_MANO01__OFS_BROWSERTC251119223694151_MANO01_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

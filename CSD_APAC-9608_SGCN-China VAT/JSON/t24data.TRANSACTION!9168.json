@@ -1,0 +1,28 @@
+{
+  "header" : {
+    "id" : "9168",
+    "dsfApiType" : "TRANSACTION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DEFAULT.VALUE.DATE" : "Y",
+    "TURNOVER.CHARGE" : "NO",
+    "INITIATION" : "BANK",
+    "STMT.NARR.REF" : "TRANS",
+    "DEBIT.CREDIT.IND" : "CREDIT",
+    "EXPOSURE.DATE" : "Y",
+    "SWIFT.NARRATIVE" : "NMSC",
+    "SHORT.DESC" : "VAT Credit",
+    "DISPO.EXEMPT" : "YES",
+    "DATA.CAPTURE" : "Y",
+    "STMT.NARR" : "VAT Credit",
+    "NARRATIVE" : [ {
+      "NARRATIVE" : "VAT Credit"
+    } ]
+  }
+}

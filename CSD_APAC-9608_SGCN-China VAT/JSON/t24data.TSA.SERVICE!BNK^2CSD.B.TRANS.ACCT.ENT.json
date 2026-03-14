@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.TRANS.ACCT.ENT",
+    "dsfApiType" : "TSA.SERVICE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BNK/CSD.B.TRANS.ACCT.ENT"
+    } ],
+    "USER" : "INPUTTER",
+    "SERVER.NAME" : [ {
+      "WORK.PROFILE" : "CSD.B.TRANS.ACCT.ENT.WL"
+    } ],
+    "SERVICE.CONTROL" : "STOP"
+  }
+}

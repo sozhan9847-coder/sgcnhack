@@ -1,0 +1,2 @@
+BCSD.B.TRANS.DETAILS.UPDEB161823_MANO02__OFS_BROWSERTC251201073761823_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

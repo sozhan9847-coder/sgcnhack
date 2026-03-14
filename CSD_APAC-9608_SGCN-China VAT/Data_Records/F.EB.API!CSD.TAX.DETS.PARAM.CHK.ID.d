@@ -1,0 +1,2 @@
+CSD.TAX.DETS.PARAM.CHK.IDFULLMETHODcheckIdCsdTaxDetsParamChkIdcom.temenos.csd.vat185589_AUTHORISER__OFS_BROWSERTC251106130685589_AUTHORISER_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

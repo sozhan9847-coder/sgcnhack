@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.BOOK.DATE.UPDATE",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "BATCH.JOB" : [ {
+      "BATCH.JOB" : "@BATCH.JOB.CONTROL"
+    } ],
+    "SCREEN.TITLE" : [ {
+      "SCREEN.TITLE" : "CSD.B.BOOK.DATE.UPDATE"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "B"
+  }
+}

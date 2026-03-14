@@ -1,0 +1,173 @@
+{
+  "header" : {
+    "id" : "CSD.VAT.WHT.RATE.PARAM",
+    "dsfApiType" : "EB.TABLE.DEFINITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACT.DESC" : [ {
+      "ACT.DESC" : "CSD.VAT.WHT.RATE.PARAM"
+    } ],
+    "LINK.TO.WFL" : "NO",
+    "PREFIX" : "EB.CSD90",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "ID",
+      "FIELD.NAME" : "ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "VAT Payable Account",
+      "APPL.VET" : "CATEGORY",
+      "FIELD.NAME" : "VAT.PAYABLE.ACCOUNT"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Input VAT Temp Account",
+      "APPL.VET" : "CATEGORY",
+      "FIELD.NAME" : "INPUT.VAT.TEMP.ACCOUNT"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "WHT Payable Account",
+      "APPL.VET" : "CATEGORY",
+      "FIELD.NAME" : "WHT.PAYABLE.ACCOUNT"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Client Category",
+      "APPL.VET" : "SECTOR",
+      "FIELD.NAME" : "CLIENT.CATEGORY",
+      "SUB.ASSOC.CODE" : "XX<"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Client Location",
+      "APPL.VET" : "COUNTRY",
+      "FIELD.NAME" : "CLIENT.LOCATION",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "11",
+      "DESCRIPTION" : "Product Category",
+      "APPL.VET" : "CATEGORY",
+      "FIELD.NAME" : "PRODUCT.CATEGORY",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "10",
+      "VETTING.TABLE" : [ {
+        "VETTING.TABLE" : "Input"
+      }, {
+        "VETTING.TABLE" : "Output"
+      } ],
+      "DESCRIPTION" : "Tax Type",
+      "FIELD.NAME" : "TAX.TYPE",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "10",
+      "VETTING.TABLE" : [ {
+        "VETTING.TABLE" : "Interest"
+      }, {
+        "VETTING.TABLE" : "Fee"
+      } ],
+      "DESCRIPTION" : "PL Type",
+      "FIELD.NAME" : "PL.TYPE",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "VAT Rate",
+      "APPL.VET" : "TAX.TYPE.CONDITION",
+      "FIELD.NAME" : "VAT.RATE",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "15",
+      "VETTING.TABLE" : [ {
+        "VETTING.TABLE" : "Inclusive"
+      }, {
+        "VETTING.TABLE" : "Exclusive"
+      } ],
+      "DESCRIPTION" : "Input VAT calculation Type",
+      "FIELD.NAME" : "INPUT.VAT.CALCULATION.TYPE",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "15",
+      "VETTING.TABLE" : [ {
+        "VETTING.TABLE" : "Inclusive"
+      }, {
+        "VETTING.TABLE" : "Exclusive"
+      } ],
+      "DESCRIPTION" : "WHT Calculation Type",
+      "FIELD.NAME" : "WHT.CALCULATION.TYPE",
+      "SUB.ASSOC.CODE" : "XX-"
+    }, {
+      "MAX.CHAR" : "16",
+      "DESCRIPTION" : "WHT Rate",
+      "APPL.VET" : "TAX.TYPE.CONDITION",
+      "FIELD.NAME" : "WHT.RATE",
+      "SUB.ASSOC.CODE" : "XX>"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.10",
+      "FIELD.NAME" : "RESERVED.10",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.9",
+      "FIELD.NAME" : "RESERVED.9",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.8",
+      "FIELD.NAME" : "RESERVED.8",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.7",
+      "FIELD.NAME" : "RESERVED.7",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.6",
+      "FIELD.NAME" : "RESERVED.6",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.5",
+      "FIELD.NAME" : "RESERVED.5",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.4",
+      "FIELD.NAME" : "RESERVED.4",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.3",
+      "FIELD.NAME" : "RESERVED.3",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.2",
+      "FIELD.NAME" : "RESERVED.2",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.1",
+      "FIELD.NAME" : "RESERVED.1",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    } ],
+    "KEY.FIELD" : "ID",
+    "FILE.TYPE" : "CUS"
+  }
+}

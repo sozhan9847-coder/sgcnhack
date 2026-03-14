@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "CSD.B.ADJ.CAP.TRANS.UPD",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "BATCH.JOB" : [ {
+      "BATCH.JOB" : "@BATCH.JOB.CONTROL"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "B"
+  }
+}

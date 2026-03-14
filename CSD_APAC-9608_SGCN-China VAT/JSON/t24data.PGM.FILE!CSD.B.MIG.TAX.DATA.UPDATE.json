@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "CSD.B.MIG.TAX.DATA.UPDATE",
+    "dsfApiType" : "PGM.FILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "BATCH.JOB" : [ {
+      "BATCH.JOB" : "CSD.B.MIG.TAX.DATA.UPDATE"
+    } ],
+    "PRODUCT" : "EB",
+    "TYPE" : "B"
+  }
+}

@@ -1,0 +1,2 @@
+CSD.B.ADJ.CAP.TRANS.UPD.SELECTFULLMETHODgetIdsCsdBAdjCapTransUpdcom.temenos.csd.vat111406_MANO02__OFS_BROWSERTC260122212711406_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

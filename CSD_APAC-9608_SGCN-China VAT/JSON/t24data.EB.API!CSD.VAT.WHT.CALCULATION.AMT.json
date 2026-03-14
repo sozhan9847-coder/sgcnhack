@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.VAT.WHT.CALCULATION.AMT",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.VAT.WHT.CALCULATION.AMT"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdVatwhtCalculationAmt",
+    "JAVA.METHOD" : "exportEntries"
+  }
+}

@@ -1,0 +1,9 @@
+* File Layout for EB.CSD.ACCT.ENT.DETAILS.EOD Created 16 JAN 26 at 10:18PM by v.manoj
+*      PREFIX[EB.CSD0.]   
+EQU EB.CSD0.ACCOUNTING.ENTRY TO 1,          EB.CSD0.RESERVED.10 TO 2, 
+          EB.CSD0.RESERVED.9 TO 3,           EB.CSD0.RESERVED.8 TO 4, 
+          EB.CSD0.RESERVED.7 TO 5,           EB.CSD0.RESERVED.6 TO 6, 
+          EB.CSD0.RESERVED.5 TO 7,           EB.CSD0.RESERVED.4 TO 8, 
+          EB.CSD0.RESERVED.3 TO 9,          EB.CSD0.RESERVED.2 TO 10, 
+         EB.CSD0.RESERVED.1 TO 11
+         

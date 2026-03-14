@@ -1,0 +1,2 @@
+VAT DebitYDEBITYNONMSCBANKVAT DebitVAT DebitTRANSYES18352_MANO02__OFS_BROWSERTC25112711218352_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

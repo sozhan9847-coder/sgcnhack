@@ -1,0 +1,18 @@
+{
+  "header" : {
+    "id" : "CSD.B.TRANS.ACCT.ENT.WL",
+    "dsfApiType" : "TSA.WORKLOAD.PROFILE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : "CSD.B.TRANS.ACCT.ENT.WL",
+    "TIME" : [ {
+      "AGENTS.REQUIRED" : "5"
+    } ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.TRANS.ACCT.ENT.SOD",
+    "dsfApiType" : "TSA.SERVICES.COB",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BNK/CSD.B.TRANS.ACCT.ENT.SOD"
+    } ],
+    "COB.STAGE" : [ {
+      "OPERATION.MODE" : "AUTO",
+      "SERVER.NAME" : [ {
+        "WORK.PROFILE" : "CSD.B.TRANS.ACCT.ENT.WL"
+      } ],
+      "COB.STAGE" : "START.OF.DAY"
+    } ]
+  }
+}

@@ -1,0 +1,2 @@
+CSD.B.TRANS.ACCT.ENT.SELECTFULLMETHODgetIdsCsdBTransAcctEntSelectcom.temenos.csd.vat194151_MANO01__OFS_BROWSERTC251119222194151_MANO01_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

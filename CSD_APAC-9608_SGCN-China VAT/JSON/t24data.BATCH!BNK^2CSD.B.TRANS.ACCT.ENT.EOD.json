@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.TRANS.ACCT.ENT.EOD",
+    "dsfApiType" : "BATCH",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JOB.NAME" : [ {
+      "JOB.NAME" : "CSD.B.BOOK.DATE.UPDATE",
+      "FREQUENCY" : "D"
+    } ],
+    "BATCH.ENVIRONMENT" : "F"
+  }
+}

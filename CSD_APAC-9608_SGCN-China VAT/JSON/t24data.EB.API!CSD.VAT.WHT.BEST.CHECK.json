@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.VAT.WHT.BEST.CHECK",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CsdUpdateBestFitMatch"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdUpdateBestFitMatch",
+    "JAVA.METHOD" : "updateRecord"
+  }
+}

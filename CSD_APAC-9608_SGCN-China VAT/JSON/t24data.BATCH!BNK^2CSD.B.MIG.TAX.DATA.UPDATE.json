@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.MIG.TAX.DATA.UPDATE",
+    "dsfApiType" : "BATCH",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "post",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JOB.NAME" : [ {
+      "JOB.NAME" : "CSD.B.MIG.TAX.DATA.UPDATE",
+      "FREQUENCY" : "D"
+    } ],
+    "BATCH.ENVIRONMENT" : "F"
+  }
+}

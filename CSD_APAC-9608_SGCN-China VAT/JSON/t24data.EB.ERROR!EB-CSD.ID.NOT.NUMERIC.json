@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "EB-CSD.ID.NOT.NUMERIC",
+    "dsfApiType" : "EB.ERROR",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ERROR.MSG" : [ {
+      "ERROR.MSG" : [ {
+        "ERROR.MSG" : "The ID should be Numeric value"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.TRANS.ACCT.ENT.SOD",
+    "dsfApiType" : "BATCH",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JOB.NAME" : [ {
+      "JOB.NAME" : "CSD.B.TRANS.ACCT.ENT",
+      "FREQUENCY" : "D"
+    } ],
+    "BATCH.ENVIRONMENT" : "F"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "header" : {
+    "id" : "BNK/CSD.B.TRANS.ACCT.ENT.SOD",
+    "dsfApiType" : "TSA.SERVICE",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ATTRIBUTE.TYPE" : [ {
+      "ATTRIBUTE.TYPE" : "RUNNING.UNDER.SCHEDULER",
+      "ATTRIBUTE.VALUE" : "CYCLED"
+    } ],
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "BNK/CSD.B.TRANS.ACCT.ENT.SOD"
+    } ],
+    "USER" : "INPUTTER",
+    "SERVER.NAME" : [ {
+      "WORK.PROFILE" : "CSD.B.TRANS.ACCT.ENT.WL"
+    } ],
+    "SERVICE.CONTROL" : "AUTO"
+  }
+}

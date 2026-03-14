@@ -1,0 +1,22 @@
+{
+  "header" : {
+    "id" : "CSD.B.ADJ.CAP.TRANS.UPD",
+    "dsfApiType" : "EB.API",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "JAVA.PACKAGE" : "com.temenos.csd.vat",
+    "SOURCE.TYPE" : "METHOD",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "CSD.B.ADJ.CAP.TRANS.UPD"
+    } ],
+    "PROTECTION.LEVEL" : "FULL",
+    "JAVA.CLASS" : "CsdBAdjCapTransUpd",
+    "JAVA.METHOD" : "process"
+  }
+}

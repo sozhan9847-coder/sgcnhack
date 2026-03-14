@@ -1,0 +1,2 @@
+CSD.CUSTOMER.IDCSD.CUSTOMER.ID10CUSCUSTOMER1340451_MANO01__OFS_BROWSERTC251120093140451_MANO01_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

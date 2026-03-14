@@ -1,0 +1,77 @@
+{
+  "header" : {
+    "id" : "CSD.WHT.ENTRY",
+    "dsfApiType" : "AC.ENTRY.PARAM",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "main",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACCOUNT.OFFICER" : "1",
+    "CR.TXN.CODE" : "9170",
+    "CONTRA.NARRATIVE" : "WHT Leg",
+    "DR.TXN.CODE" : "9169",
+    "LOG.LEVEL" : [ {
+      "LOG.LEVEL" : "DETAIL"
+    }, {
+      "LOG.LEVEL" : "EXTERNALDETAIL"
+    } ],
+    "CONTRA.ENTRY" : "CURRENCY.NET",
+    "ACCOUNTING.MODE" : "SAO",
+    "CONTRA.ACCT.CATEG" : "14010",
+    "FIELD.DELIM" : ",",
+    "ENTRY.DELIMITER" : "#",
+    "SUSP.CLASS.CR" : "SUSPCREDIT",
+    "SUSP.CLASS.DR" : "SUSPDEBIT",
+    "DESCRIPTION" : [ {
+      "DESCRIPTION" : "Soc Gen WHT Leg"
+    } ],
+    "CONTRA.CR.TXN.CODE" : "9170",
+    "UPDATE.REPORT.FILE" : "UNIQUE",
+    "CONTRA.DR.TXN.CODE" : "9169",
+    "RECORD.TYPE" : [ {
+      "RECORD.ID.POS" : "1",
+      "RECORD.ID" : "4N",
+      "RECORD.TYPE" : "DATA",
+      "DATA.ITEM" : [ {
+        "DATA.ITEM" : "PL.CATEGORY",
+        "DATA.START" : "2"
+      }, {
+        "DATA.ITEM" : "ACCOUNT",
+        "DATA.START" : "3"
+      }, {
+        "DATA.MAND" : "Y",
+        "DATA.ITEM" : "AMOUNT",
+        "DATA.START" : "4"
+      }, {
+        "DATA.MAND" : "Y",
+        "DATA.ITEM" : "CURRENCY",
+        "DATA.START" : "5"
+      }, {
+        "DATA.MAND" : "Y",
+        "DATA.ITEM" : "SIGN",
+        "DATA.START" : "6"
+      }, {
+        "DATA.MAND" : "Y",
+        "DATA.ITEM" : "TRANS.REFERENCE",
+        "DATA.START" : "7"
+      }, {
+        "DATA.ITEM" : "CUSTOMER",
+        "DATA.START" : "8"
+      }, {
+        "DATA.ITEM" : "ACCOUNT.OFFICER",
+        "DATA.START" : "9"
+      }, {
+        "DATA.ITEM" : "PRODUCT.CATEGORY",
+        "DATA.START" : "10"
+      }, {
+        "DATA.ITEM" : "OUR.REF",
+        "DATA.START" : "11"
+      } ]
+    } ],
+    "SYSTEM.ID" : "AC"
+  }
+}

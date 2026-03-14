@@ -1,0 +1,2 @@
+BNK/CSD.B.MIG.TAX.DATA.UPDATEINPUTTERAUTO2025050605/01/2026 16:36:06136519_MANO02__OFS_BROWSERTC260105163636519_MANO02_OFS_BROWSERTCGB00100011
+<double-byte-sep/>

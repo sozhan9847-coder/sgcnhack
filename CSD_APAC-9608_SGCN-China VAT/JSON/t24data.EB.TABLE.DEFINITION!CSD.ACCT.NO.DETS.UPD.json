@@ -1,0 +1,56 @@
+{
+  "header" : {
+    "id" : "CSD.ACCT.NO.DETS.UPD",
+    "dsfApiType" : "EB.TABLE.DEFINITION",
+    "dsfApiComponent" : "t24data",
+    "dsfApiPhase" : "pre",
+    "metadata" : {
+      "installed" : "NO",
+      "release" : "R25"
+    }
+  },
+  "body" : {
+    "ACT.DESC" : [ {
+      "ACT.DESC" : "CSD.ACCT.NO.DETS.UPD"
+    } ],
+    "PREFIX" : "EB.CSD45",
+    "PRODUCT" : "EB",
+    "FIELD.NAME" : [ {
+      "MAX.CHAR" : "19",
+      "DESCRIPTION" : "ID",
+      "FIELD.NAME" : "ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "10",
+      "DESCRIPTION" : "BEST.FIT.CUST.ID",
+      "FIELD.NAME" : "BEST.FIT.CUST.ID",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "10",
+      "DESCRIPTION" : "ACCT.TAX.TYPE",
+      "FIELD.NAME" : "ACCT.TAX.TYPE",
+      "DATA.TYPE" : "ALPHANUMERIC"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.3",
+      "FIELD.NAME" : "RESERVED.3",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.2",
+      "FIELD.NAME" : "RESERVED.2",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    }, {
+      "MAX.CHAR" : "35",
+      "DESCRIPTION" : "RESERVED.1",
+      "FIELD.NAME" : "RESERVED.1",
+      "DATA.TYPE" : "ALPHANUMERIC",
+      "FLD.PROPERTY" : "NOINPUT"
+    } ],
+    "KEY.FIELD" : "ID",
+    "FILE.TYPE" : "CUS",
+    "PGM.TYPE" : "L"
+  }
+}

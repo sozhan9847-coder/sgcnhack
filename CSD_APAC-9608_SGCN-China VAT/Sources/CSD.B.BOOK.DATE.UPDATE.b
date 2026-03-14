@@ -1,0 +1,254 @@
+* @ValidationCode : Mjo1MTkwODU2Nzc6Q3AxMjUyOjE3Njg2NDM3NTUzOTE6di5tYW5vajotMTotMTowOjA6ZmFsc2U6Ti9BOlIyNV9BTVIuMDotMTotMQ==
+* @ValidationInfo : Timestamp         : 17 Jan 2026 15:25:55
+* @ValidationInfo : Encoding          : Cp1252
+* @ValidationInfo : User Name         : v.manoj
+* @ValidationInfo : Nb tests success  : N/A
+* @ValidationInfo : Nb tests failure  : N/A
+* @ValidationInfo : Rating            : N/A
+* @ValidationInfo : Coverage          : N/A
+* @ValidationInfo : Strict flag       : N/A
+* @ValidationInfo : Bypass GateKeeper : false
+* @ValidationInfo : Compiler Version  : R25_AMR.0
+* @ValidationInfo : Copyright Temenos Headquarters SA 1993-2026. All rights reserved.
+*----------------------------------------------------------------------------------------------------------------
+$PACKAGE CSD.APAC_9608_CSD_SGCN_ChinaVAT
+SUBROUTINE CSD.B.BOOK.DATE.UPDATE(Y.ID)
+*-----------------------------------------------------------------------------
+* Description  : Routine to raise the statement entries for the VAT
+* Developed by : Manoj V
+* Dev. Ref     : CSD_APAC-9608
+* Attached to     : BNK/CSD.B.TRANS.ACCT.ENT.EOD
+* Attached as     : Batch routine
+* In arguments    : Not Applicable
+* Out arguments   : Not Applicable
+*-----------------------------------------------------------------------------
+* Modification History :
+*-----------------------------------------------------------------------------
+*-----------------------------------------------------------------------------
+    $INSERT I_COMMON
+    $INSERT I_EQUATE
+    $INSERT I_F.STMT.ENTRY
+    $INSERT I_ACCT.COMMON
+    $INSERT I_F.ACCOUNT
+    $INSERT I_F.EB.CSD.ACCT.ENT.DETAILS.EOD
+    $INSERT I_CSD.B.BOOK.DATE.UPDATE.COMMON
+    
+    GOSUB PROCESS
+    
+RETURN
+
+********
+PROCESS:
+********
+    R.ACCT.ENT.DETS.REC = ''
+    CALL OCOMO(" Eod Job Process Routine Called ")
+    CALL OCOMO("Incoming Processing Id = ":Y.ID)
+    CALL F.READ (FN.EB.CSD.ACCT.ENT.DETAILS.EOD,Y.ID,R.ACCT.ENT.DETS.REC,F.EB.CSD.ACCT.ENT.DETAILS.EOD,Y.ERROR)
+    CALL OCOMO("R.ACCT.ENT.DETS.REC = ":R.ACCT.ENT.DETS.REC)
+    Y.ACCT.ENTRY = R.ACCT.ENT.DETS.REC<EB.CSD0.ACCOUNTING.ENTRY>
+    CALL OCOMO("Y.ACCT.ENTRY = ":Y.ACCT.ENTRY)
+    
+    Y.DR.FIN.ARR = FIELD(Y.ACCT.ENTRY,'$$',1)
+    CALL OCOMO("Y.DR.FIN.ARR = ":Y.DR.FIN.ARR)
+    Y.CR.FIN.ARR = FIELD(Y.ACCT.ENTRY,'$$',2)
+    CALL OCOMO("Y.CR.FIN.ARR = ":Y.CR.FIN.ARR)
+    
+    GOSUB GET.DATA
+    GOSUB RAISE.DR.ACCOUNTING
+    GOSUB RAISE.CR.ACCOUNTING
+    GOSUB RAISE.STMT.ENT
+
+RETURN
+ 
+*********
+GET.DATA:
+*********
+    CALL OCOMO(" Get Data Method Called ")
+* Debit Side Details
+    Y.DR.AC.OFC = ''
+    Y.DR.PROD.CAT = ''
+    Y.DR.POS.TYPE = ''
+    Y.DR.CCY.MKT = ''
+    R.DR.ACC = ''
+    ACC.ERR1 = ''
+    
+    Y.DR.ACCT = FIELD(Y.DR.FIN.ARR,'*',1)
+    CALL OCOMO("Y.DR.ACCT = ":Y.DR.ACCT)
+    IF Y.DR.ACCT NE '' THEN
+        CALL F.READ(FN.ACC,Y.DR.ACCT,R.DR.ACC,F.ACC,ACC.ERR1)
+        CALL OCOMO("R.DR.ACC = ":R.DR.ACC)
+        CALL OCOMO("ACC.ERR1 = ":ACC.ERR1)
+        IF R.DR.ACC NE '' THEN
+            CALL OCOMO(" Debit Account Record Condition Satisfied ")
+            Y.DR.AC.OFC = R.DR.ACC<AC.ACCOUNT.OFFICER>
+            Y.DR.PROD.CAT = R.DR.ACC<AC.CATEGORY>
+            Y.DR.POS.TYPE = R.DR.ACC<AC.POSITION.TYPE>
+            Y.DR.CCY.MKT = R.DR.ACC<AC.CURRENCY.MARKET>
+            CALL OCOMO("Y.DR.AC.OFC = ":Y.DR.AC.OFC)
+            CALL OCOMO("Y.DR.PROD.CAT = ":Y.DR.PROD.CAT)
+            CALL OCOMO("Y.DR.POS.TYPE = ":Y.DR.POS.TYPE)
+            CALL OCOMO("Y.DR.CCY.MKT = ":Y.DR.CCY.MKT)
+        END
+    END ELSE
+        CALL OCOMO(" Pl Categ Condition Satisfied ")
+        Y.DR.AC.OFC = FIELD(Y.DR.FIN.ARR,'*',7)
+        Y.DR.PROD.CAT = FIELD(Y.DR.FIN.ARR,'*',8)
+        Y.DR.POS.TYPE = FIELD(Y.DR.FIN.ARR,'*',13)
+        Y.DR.CCY.MKT = FIELD(Y.DR.FIN.ARR,'*',16)
+    END
+    
+    Y.DR.CO.CODE = FIELD(Y.DR.FIN.ARR,'*',2)
+    Y.DR.AMT.LCY = FIELD(Y.DR.FIN.ARR,'*',3)
+    Y.DR.TXN.CODE = FIELD(Y.DR.FIN.ARR,'*',4)
+    Y.DR.PL.CATEG = FIELD(Y.DR.FIN.ARR,'*',5)
+    Y.DR.CUS.ID = FIELD(Y.DR.FIN.ARR,'*',6)
+    Y.DR.VAL.DATE = FIELD(Y.DR.FIN.ARR,'*',9)
+    Y.DR.CCY = FIELD(Y.DR.FIN.ARR,'*',10)
+    Y.DR.AMT.FCY = FIELD(Y.DR.FIN.ARR,'*',11)
+    Y.DR.EXCHG.RTE = FIELD(Y.DR.FIN.ARR,'*',12)
+    Y.DR.OUR.REF = FIELD(Y.DR.FIN.ARR,'*',14)
+    Y.DR.EXP.DATE = FIELD(Y.DR.FIN.ARR,'*',15)
+    Y.DR.TRANS.REF = FIELD(Y.DR.FIN.ARR,'*',17)
+    Y.DR.SYS.ID = FIELD(Y.DR.FIN.ARR,'*',18)
+    Y.DR.BOOK.DATE = FIELD(Y.DR.FIN.ARR,'*',19)
+    Y.DR.ORIG.CCY.MKT = FIELD(Y.DR.FIN.ARR,'*',20)
+    Y.DR.THEIR.REF = FIELD(Y.DR.FIN.ARR,'*',21)
+    
+* Credit Side Details
+    Y.CR.AC.OFC = ''
+    Y.CR.PROD.CAT = ''
+    Y.CR.POS.TYPE = ''
+    Y.CR.CCY.MKT = ''
+    R.CR.ACC = ''
+    ACC.ERR2 = ''
+    
+    Y.CR.ACCT = FIELD(Y.CR.FIN.ARR,'*',1)
+    CALL OCOMO("Y.CR.ACCT = ":Y.CR.ACCT)
+    IF Y.CR.ACCT NE '' THEN
+        CALL F.READ(FN.ACC,Y.CR.ACCT,R.CR.ACC,F.ACC,ACC.ERR2)
+        CALL OCOMO("R.CR.ACC = ":R.CR.ACC)
+        CALL OCOMO("ACC.ERR2 = ":ACC.ERR2)
+        IF R.CR.ACC NE '' THEN
+            CALL OCOMO(" Credit Account Record Condition Satisfied ")
+            Y.CR.AC.OFC = R.CR.ACC<AC.ACCOUNT.OFFICER>
+            Y.CR.PROD.CAT = R.CR.ACC<AC.CATEGORY>
+            Y.CR.POS.TYPE = R.CR.ACC<AC.POSITION.TYPE>
+            Y.CR.CCY.MKT = R.CR.ACC<AC.CURRENCY.MARKET>
+            CALL OCOMO("Y.CR.AC.OFC = ":Y.CR.AC.OFC)
+            CALL OCOMO("Y.CR.PROD.CAT = ":Y.CR.PROD.CAT)
+            CALL OCOMO("Y.CR.POS.TYPE = ":Y.CR.POS.TYPE)
+            CALL OCOMO("Y.CR.CCY.MKT = ":Y.CR.CCY.MKT)
+        END
+    END ELSE
+        CALL OCOMO(" Pl Categ Condition Satisfied ")
+        Y.CR.AC.OFC = FIELD(Y.CR.FIN.ARR,'*',7)
+        Y.CR.PROD.CAT = FIELD(Y.CR.FIN.ARR,'*',8)
+        Y.CR.POS.TYPE = FIELD(Y.CR.FIN.ARR,'*',13)
+        Y.CR.CCY.MKT = FIELD(Y.CR.FIN.ARR,'*',16)
+    END
+    
+    Y.CR.CO.CODE = FIELD(Y.CR.FIN.ARR,'*',2)
+    Y.CR.AMT.LCY = FIELD(Y.CR.FIN.ARR,'*',3)
+    Y.CR.TXN.CODE = FIELD(Y.CR.FIN.ARR,'*',4)
+    Y.CR.PL.CATEG = FIELD(Y.CR.FIN.ARR,'*',5)
+    Y.CR.CUS.ID = FIELD(Y.CR.FIN.ARR,'*',6)
+    Y.CR.VAL.DATE = FIELD(Y.CR.FIN.ARR,'*',9)
+    Y.CR.CCY = FIELD(Y.CR.FIN.ARR,'*',10)
+    Y.CR.AMT.FCY = FIELD(Y.CR.FIN.ARR,'*',11)
+    Y.CR.EXCHG.RTE = FIELD(Y.CR.FIN.ARR,'*',12)
+    Y.CR.OUR.REF = FIELD(Y.CR.FIN.ARR,'*',14)
+    Y.CR.EXP.DATE = FIELD(Y.CR.FIN.ARR,'*',15)
+    Y.CR.TRANS.REF = FIELD(Y.CR.FIN.ARR,'*',17)
+    Y.CR.SYS.ID = FIELD(Y.CR.FIN.ARR,'*',18)
+    Y.CR.BOOK.DATE = FIELD(Y.CR.FIN.ARR,'*',19)
+    Y.CR.ORIG.CCY.MKT = FIELD(Y.CR.FIN.ARR,'*',20)
+    Y.CR.THEIR.REF = FIELD(Y.CR.FIN.ARR,'*',21)
+
+RETURN
+
+********************
+RAISE.DR.ACCOUNTING:
+********************
+    R.STE.ARRAY = ''
+    R.STENTRY = ''
+    R.STENTRY<AC.STE.ACCOUNT.NUMBER> = Y.DR.ACCT
+    R.STENTRY<AC.STE.COMPANY.CODE> = Y.DR.CO.CODE
+    R.STENTRY<AC.STE.AMOUNT.LCY> = '-':Y.DR.AMT.LCY
+    R.STENTRY<AC.STE.TRANSACTION.CODE> = Y.DR.TXN.CODE
+    R.STENTRY<AC.STE.PL.CATEGORY> = Y.DR.PL.CATEG
+    R.STENTRY<AC.STE.CUSTOMER.ID> = Y.DR.CUS.ID
+    R.STENTRY<AC.STE.ACCOUNT.OFFICER> = Y.DR.AC.OFC
+    R.STENTRY<AC.STE.PRODUCT.CATEGORY> = Y.DR.PROD.CAT
+    R.STENTRY<AC.STE.VALUE.DATE>  = Y.DR.VAL.DATE
+    R.STENTRY<AC.STE.CURRENCY> = Y.DR.CCY
+    IF Y.DR.AMT.FCY NE '' THEN
+        R.STENTRY<AC.STE.AMOUNT.FCY> = '-':Y.DR.AMT.FCY
+        R.STENTRY<AC.STE.EXCHANGE.RATE> = Y.DR.EXCHG.RTE
+    END
+    R.STENTRY<AC.STE.POSITION.TYPE> = Y.DR.POS.TYPE
+    R.STENTRY<AC.STE.OUR.REFERENCE> = Y.DR.OUR.REF
+    R.STENTRY<AC.STE.EXPOSURE.DATE>   = Y.DR.EXP.DATE
+    R.STENTRY<AC.STE.CURRENCY.MARKET> = Y.DR.CCY.MKT
+    R.STENTRY<AC.STE.TRANS.REFERENCE> = Y.DR.TRANS.REF
+    R.STENTRY<AC.STE.SYSTEM.ID> = Y.DR.SYS.ID
+    R.STENTRY<AC.STE.BOOKING.DATE> = Y.DR.BOOK.DATE
+    R.STENTRY<AC.STE.ORIG.CCY.MARKET> = Y.DR.ORIG.CCY.MKT
+    IF Y.DR.THEIR.REF NE '' THEN
+        R.STENTRY<AC.STE.THEIR.REFERENCE> = Y.DR.THEIR.REF
+    END
+    R.STENTRY<AC.STE.PROCESS.FORWARD> = "Y"
+    CALL OCOMO("DEBIT R.STENTRY = ":R.STENTRY)
+*R.STENTRY<AC.STE.NARRATIVE> = Y.NARR.DR
+*R.STENTRY<AC.STE.ADD.DETAIL.NAME,1> = 'SUPPLEMENTARY.DETAILS'
+*R.STENTRY<AC.STE.ADD.DETAIL.VALUE,1> = Y.ADD.DETAIL.VALUE1
+    R.STE.ARRAY<-1> = LOWER(R.STENTRY)
+    R.STENTRY = ''
+RETURN
+
+********************
+RAISE.CR.ACCOUNTING:
+********************
+    R.STENTRY = ''
+    R.STENTRY<AC.STE.ACCOUNT.NUMBER> = Y.CR.ACCT
+    R.STENTRY<AC.STE.COMPANY.CODE> = Y.CR.CO.CODE
+    R.STENTRY<AC.STE.AMOUNT.LCY> = Y.CR.AMT.LCY
+    R.STENTRY<AC.STE.TRANSACTION.CODE> = Y.CR.TXN.CODE
+    R.STENTRY<AC.STE.PL.CATEGORY> = Y.CR.PL.CATEG
+    R.STENTRY<AC.STE.CUSTOMER.ID> = Y.CR.CUS.ID
+    R.STENTRY<AC.STE.ACCOUNT.OFFICER> = Y.CR.AC.OFC
+    R.STENTRY<AC.STE.PRODUCT.CATEGORY> = Y.CR.PROD.CAT
+    R.STENTRY<AC.STE.VALUE.DATE>  = Y.CR.VAL.DATE
+    R.STENTRY<AC.STE.CURRENCY> = Y.CR.CCY
+    IF Y.CR.AMT.FCY NE '' THEN
+        R.STENTRY<AC.STE.AMOUNT.FCY> = Y.CR.AMT.FCY
+        R.STENTRY<AC.STE.EXCHANGE.RATE> = Y.CR.EXCHG.RTE
+    END
+    R.STENTRY<AC.STE.POSITION.TYPE> = Y.CR.POS.TYPE
+    R.STENTRY<AC.STE.OUR.REFERENCE> = Y.CR.OUR.REF
+    R.STENTRY<AC.STE.EXPOSURE.DATE>   = Y.CR.EXP.DATE
+    R.STENTRY<AC.STE.CURRENCY.MARKET> = Y.CR.CCY.MKT
+    R.STENTRY<AC.STE.TRANS.REFERENCE> = Y.CR.TRANS.REF
+    R.STENTRY<AC.STE.SYSTEM.ID> = Y.CR.SYS.ID
+    R.STENTRY<AC.STE.BOOKING.DATE> = Y.CR.BOOK.DATE
+    R.STENTRY<AC.STE.ORIG.CCY.MARKET> = Y.CR.ORIG.CCY.MKT
+    IF Y.CR.THEIR.REF NE '' THEN
+        R.STENTRY<AC.STE.THEIR.REFERENCE> = Y.CR.THEIR.REF
+    END
+    R.STENTRY<AC.STE.PROCESS.FORWARD> = "Y"
+    CALL OCOMO("CREDIT R.STENTRY = ":R.STENTRY)
+*R.STENTRY<AC.STE.NARRATIVE> = Y.NARR.CR
+*R.STENTRY<AC.STE.ADD.DETAIL.NAME,1> = 'SUPPLEMENTARY.DETAILS'
+*R.STENTRY<AC.STE.ADD.DETAIL.VALUE,1> = Y.ADD.DETAIL.VALUE2
+    R.STE.ARRAY<-1> = LOWER(R.STENTRY)
+    R.STENTRY = ''
+RETURN
+
+***************
+RAISE.STMT.ENT:
+***************
+    CALL OCOMO("DEBIT R.STE.ARRAY = ":R.STE.ARRAY)
+    CALL EB.ACCOUNTING("CSD.B.TRANS.ACCT.ENT.DETS","SAO",R.STE.ARRAY,'')
+    CALL F.DELETE (FN.EB.CSD.ACCT.ENT.DETAILS.EOD,Y.ID)
+RETURN
+
+END
